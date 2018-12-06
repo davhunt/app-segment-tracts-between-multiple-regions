@@ -15,11 +15,11 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit f425dba7a5917d86795f5ef99772de0504ad94ab
+commit e72b586cb274ad4341f58231376c9f20380359cb
 Author: Daniel Bullock <dnbulloc@i5.red.uits.iu.edu>
-Date:   Wed Dec 5 18:11:28 2018 -0500
+Date:   Wed Dec 5 18:21:37 2018 -0500
 
-    updated tools for bl apps
+    reset to bl verson, not local version
 /N/u/brlife/git/encode
 commit e4f38b1d47422dae3cda239ba558d8491bad6000
 Author: Soichi Hayashi <hayashis@iu.edu>
