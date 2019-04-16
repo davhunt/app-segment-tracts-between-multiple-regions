@@ -13,4 +13,4 @@ echo "generating tracts/"
 
 echo "generating surfaces/"
 atlas=$(jq -r .atlas config.json)
-time singularity exec -e docker://brainlife/docker-pythonvtk ./freesurfer2vtks.py $atlas/parc.nii.gz
+time singularity exec -e docker://brainlife/pythonvtk:1.1 ./freesurfer2vtks.py $atlas/parc.nii.gz
