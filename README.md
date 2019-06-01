@@ -5,8 +5,8 @@
 This app will perform ensemble tracking between 2 or more cortical regions of interest (ROIs) from either a freesurfer parcellation or an atlas parcellation. First, the ROIs are registered to diffusion space using Freesurfer's mri_label2vol, and a white matter mask is generated in diffusion space, by running the create_wm_mask script. Then, tracking will be performed using mrtrix/0.2.12 by running the trackROI2ROI script. Finally, a classification structure will be generated using Vistasoft's bsc_mergeFGandClass and bsc_makeFGsFromClassification functions by running the classificationGenerator script.
 
 ### Authors
+- Dan Bullock (dnbulloc@iu.edu)
 - Brad Caron (bacaron@iu.edu)
-- Ilaria Sani (isani01@rockefeller.edu)
 
 ### Contributors
 - Soichi Hayashi (hayashi@iu.edu)
@@ -20,7 +20,7 @@ This app will perform ensemble tracking between 2 or more cortical regions of in
 
 ### On Brainlife.io
 
-You can submit this App online at [https://doi.org/10.25663/bl.app.34](https://doi.org/10.25663/bl.app.34) via the "Execute" tab.
+You can submit this App online at [https://doi.org/10.25663/brainlife.app.191](https://doi.org/10.25663/brainlife.app.191) via the "Execute" tab.
 
 ### Running Locally (on your machine)
 
@@ -29,16 +29,10 @@ You can submit this App online at [https://doi.org/10.25663/bl.app.34](https://d
 
 ```json
 {
-        "parcellation": "./input/parc/",
-        "dtiinit": "./input/dtiinit/",
-        "fsurfer": "./input/freesurfer/",
-        "roiPair": "45,54",      
-        "num_fibers": 500000,
-        "max_num": 1000000,
-        "stepsize": 0.2,
-        "minlength": 10,
-        "maxlength": 200,
-        "num_repetitions": 1
+	"roiPairs":	"23 95 2 8\n1 2 12 34\n8 3 5\n4 5",
+	"track":  "path/to/tck.tck",
+	"atlas":  "path/to/atlas.nii.gz",
+   	"smoothKernel": 0
 }
 ```
 
@@ -50,9 +44,8 @@ You can download sample datasets from Brainlife using [Brainlife CLI](https://gi
 npm install -g brainlife
 bl login
 mkdir input
-bl dataset download 5b96bc8b059cf900271924f4 && mv 5b96bc8b059cf900271924f4 input/parcellation
-bl dataset download 5b96bc8d059cf900271924f5 && mv 5b96bc8d059cf900271924f5 input/dtiinit
-bl dataset download 5b96bc8d059cf900271924f5 && mv 5b96bc8d059cf900271924f5 input/freesurfer
+
+roi & atlas sample needed
 
 ```
 
@@ -65,7 +58,7 @@ bl dataset download 5b96bc8d059cf900271924f5 && mv 5b96bc8d059cf900271924f5 inpu
 
 ## Output
 
-The main outputs of this App is a 'track.tck' file, a folder called 'tracts' containing .json files for each tract, an 'output.mat' containing the classification structure, and a text file called 'output_fibercounts.txt' which contains information regarding the number of streamlines in each tract.
+The main outputs of this App is a 'track.tck' file, a folder called 'tracts' containing .json files for each tract, an 'classification.mat' containing the classification structure, and a text file called 'output_fibercounts.txt' which contains information regarding the number of streamlines in each tract.
 
 #### Product.json
 The secondary output of this app is `product.json`. This file allows web interfaces, DB and API calls on the results of the processing. 
