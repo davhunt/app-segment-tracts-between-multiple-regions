@@ -15,14 +15,11 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit 3929069be460eceba21a3bb8c52a2b6bf6a98c1a
-Merge: d201fba 50dc171
+commit c31b6c4595e3493dcf12464909e0c9070c776066
 Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Fri Jul 12 16:37:19 2019 -0400
+Date:   Fri Jul 26 14:58:09 2019 -0400
 
-    Merge pull request #2 from davhunt/master
-    
-    save
+    reworked bl segmentation code to use improved roi generation function
 /N/u/brlife/git/encode
 commit 538a73bc4f8b4d94545bc2dfe434fec55e0c7a95
 Author: Soichi Hayashi <hayashis@iu.edu>
