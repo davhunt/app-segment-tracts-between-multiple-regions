@@ -14,15 +14,15 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     Merge pull request #41 from dasantonym/master
     
     added package.json to be able to intall via npm package manager
-/N/u/brlife/git/wma_tools
-commit 0b93cd08c73d1fc98a4c50ec6d2087fe96737b97
-Merge: 1c5dfac e75d610
-Author: Daniel Bullock <iisdanbul@gmail.com>
-Date:   Mon Aug 26 12:51:09 2019 -0400
+/N/u/davhunt/Carbonate/wma_tools
+commit 670ae6d6f99f4eb046103dc28b88920aa1fd5ee7
+Merge: 650e871 f719862
+Author: Daniel Bullock <dnbulloc@iu.edu>
+Date:   Tue Sep 10 11:36:21 2019 -0400
 
-    Merge pull request #7 from bacaron/patch-1
+    Merge pull request #8 from soichih/master
     
-    Update bsc_LoadAndParseFiberStructure.m
+    Moving a few BL specific code to BL App repos
 /N/u/brlife/git/encode
 commit 538a73bc4f8b4d94545bc2dfe434fec55e0c7a95
 Author: Soichi Hayashi <hayashis@iu.edu>
